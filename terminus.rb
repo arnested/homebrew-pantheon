@@ -3,8 +3,8 @@ require File.expand_path("../../../homebrew/homebrew-php/Requirements/php-meta-r
 class Terminus < Formula
   desc "Terminus: The Pantheon CLI"
   homepage "https://github.com/pantheon-systems/cli"
-  url "https://github.com/pantheon-systems/cli/archive/0.5.6.tar.gz"
-  sha256 "4e4c42442c51adf60635df9c56f2f39a4b1d628abb9c2e936fa83082c34c3390"
+  url "https://github.com/pantheon-systems/cli/archive/0.6.1.tar.gz"
+  sha256 "66ba41fff1b274a15da3be53b7dd9cfbd32d177519f604b8daa737a713566f4a"
   head "https://github.com/pantheon-systems/cli.git"
 
   depends_on PhpMetaRequirement
@@ -20,7 +20,7 @@ class Terminus < Formula
       exec "#{libexec}/bin/terminus" "$@"
     EOS
 
-    bash_completion.install libexec/"utils/wp-completion.bash" => "pantheon.wp"
+    bash_completion.install libexec/"utils/terminus-completion.bash"
   end
 
   test do
