@@ -3,8 +3,8 @@ require File.expand_path("../../../homebrew/homebrew-php/Requirements/php-meta-r
 class Terminus < Formula
   desc "Terminus: The Pantheon CLI"
   homepage "https://github.com/pantheon-systems/cli"
-  url "https://github.com/pantheon-systems/cli/archive/0.9.2.tar.gz"
-  sha256 "a9c0e46052d7b753603421c53f40c746372fb8efbd2f3d587eb3a0288753f8f6"
+  url "https://github.com/pantheon-systems/cli/archive/0.10.2.tar.gz"
+  sha256 "9daf9656390217c9f1dea111d9fbb88068b3eec626752955dfd477ffba8d8108"
   head "https://github.com/pantheon-systems/cli.git"
 
   depends_on PhpMetaRequirement
@@ -24,6 +24,6 @@ class Terminus < Formula
   end
 
   test do
-    system "terminus cli info | grep -q 'Terminus root dir:\t*#{libexec}'"
+    system "terminus cli info | grep -q 'Terminus root dir: *\\| *#{libexec}'"
   end
 end
